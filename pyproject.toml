@@ -33,7 +33,12 @@ package = false
 [tool.ruff.format]
 indent-style = "tab"
 
+[tool.pytest.ini_options]
+testpaths = ["fraud-detection/tests"]
+pythonpath = ["fraud-detection"]
+
 [dependency-groups]
 dev = [
     "ruff>=0.16.4",
+    "pytest>=8.0",
 ]
