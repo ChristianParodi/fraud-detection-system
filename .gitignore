@@ -1,5 +1,8 @@
-# UV
-/**/uv.lock
-/**/.python-version
 
 /**/__pycache__
+
+# all hidden folders (not files)
+/**/.*/
+
+# datasets
+/**/*.csv
