@@ -15,8 +15,25 @@ dependencies = [
     "scikit-learn",
     "lightgbm",
     "imbalanced-learn",
-    "jupyter"
+    "jupyter",
+    "kagglehub>=1.0.2",
+]
+
+[project.optional-dependencies]
+# GPU notebooks under notebooks/cuml/ — RAPIDS packages, not on plain PyPI.
+# Install with: uv sync --extra cuml --extra-index-url https://pypi.nvidia.com
+cuml = [
+    "cudf-cu12",
+    "cuml-cu12",
 ]
 
 [tool.uv]
 package = false
+
+[tool.ruff.format]
+indent-style = "tab"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.4",
+]
